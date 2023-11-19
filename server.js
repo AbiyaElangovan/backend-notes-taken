@@ -39,7 +39,7 @@ db.once('open', () => {
 // })
 
 
-if(process.env.NODE_ENV === 'production'){
+if( 'production' === 'production'){
     app.use(express.static('client/build'));
     app.get('*', (req, res) =>{
         res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
@@ -48,7 +48,7 @@ if(process.env.NODE_ENV === 'production'){
 
 
 //listen server
-const PORT = 5000
-app.listen(PORT,()=>console.log(`server is listening on port ${PORT}` ))
+// const PORT = 5000
+// app.listen(PORT,()=>console.log(`server is listening on port ${PORT}` ))
 
 
